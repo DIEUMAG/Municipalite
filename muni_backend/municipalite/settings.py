@@ -34,7 +34,11 @@ ALLOWED_HOSTS = [
     '0.0.0.0',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+#CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://dieumag.github.io",
+]
 
 AUTH_USER_MODEL = 'accounts.User'
 
