@@ -97037,7 +97037,7 @@ return A.J($async$Ec,r)},
 tp(a,b){return this.axz(a,b)},
 axz(a,b){var s=0,r=A.K(t.a),q,p=2,o=[],n,m,l,k,j,i,h,g,f
 var $async$tp=A.L(function(c,d){if(c===1){o.push(d)
-s=p}for(;;)switch(s){case 0:g=A.eS("https://dieumags.pythonanywhere.com/accounts/login/")
+s=p}for(;;)switch(s){case 0:g=A.eS("https://dieumags.pythonanywhere.com/api/accounts/login/")
 p=4
 j=t.N
 i=A.ac(["Content-Type","application/json"],j,j)
