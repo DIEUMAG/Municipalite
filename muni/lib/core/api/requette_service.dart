@@ -179,7 +179,7 @@ class ActeNaissanceService {
   /// POST /api/actes-naissance/
   Future<ActeNaissanceModel> soumettre(ActeNaissanceModel acte) async {
     final response = await _client.post(
-      Uri.parse('${ApiConstants.baseUrl}/actes-naissance/'),
+      Uri.parse('${ApiConstants.baseUrl}/api/actes-naissance/'),
       headers: _headers,
       body: jsonEncode(acte.toJson()),
     );
@@ -190,7 +190,7 @@ class ActeNaissanceService {
   /// GET /api/actes-naissance/
   Future<List<ActeNaissanceModel>> fetchAll() async {
     final response = await _client.get(
-      Uri.parse('${ApiConstants.baseUrl}/actes-naissance/'),
+      Uri.parse('${ApiConstants.baseUrl}/api/actes-naissance/'),
       headers: _headers,
     );
     _check(response);
@@ -202,7 +202,7 @@ class ActeNaissanceService {
   /// GET /api/actes-naissance/{id}/
   Future<ActeNaissanceModel> fetchOne(int id) async {
     final response = await _client.get(
-      Uri.parse('${ApiConstants.baseUrl}/actes-naissance/$id/'),
+      Uri.parse('${ApiConstants.baseUrl}/api/actes-naissance/$id/'),
       headers: _headers,
     );
     _check(response);

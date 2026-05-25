@@ -19,7 +19,7 @@ class ActualiteService {
 
       final response = await dio.get(
 
-        '${ApiConstants.baseUrl}/actualites/',
+        '${ApiConstants.baseUrl}/api/actualites/',
 
         options: Options(
           headers: {

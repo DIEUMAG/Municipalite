@@ -16,7 +16,7 @@ class AuthService {
   }) async {
 
     final url = Uri.parse(
-      '${ApiConstants.baseUrl}/accounts/register/',
+      '${ApiConstants.baseUrl}/api/accounts/register/',
     );
 
     try {
