@@ -1,5 +1,6 @@
-class MediaModel {
+import '/core/constants/api_constants.dart';
 
+class MediaModel {
   final String fichier;
   final bool isVideo;
 
@@ -8,28 +9,28 @@ class MediaModel {
     required this.isVideo,
   });
 
-  factory MediaModel.fromJson(
-    Map<String, dynamic> json,
-  ) {
+  // ✅ URL complète construite ici
+  String get fichierUrl {
+    if (fichier.startsWith('http')) {
+      return fichier; // déjà absolue
+    }
+    return '${ApiConstants.baseUrl}$fichier';
+  }
 
+  factory MediaModel.fromJson(Map<String, dynamic> json) {
     return MediaModel(
-      fichier: json['fichier'],
-      isVideo: json['is_video'],
+      fichier: json['fichier'] ?? '',
+      isVideo: json['is_video'] ?? false,
     );
   }
 }
 
 
 class ActualiteModel {
-
   final int id;
-
   final String titre;
-
   final String corps;
-
   final String createdAt;
-
   final List<MediaModel> medias;
 
   ActualiteModel({
@@ -40,25 +41,17 @@ class ActualiteModel {
     required this.medias,
   });
 
-  factory ActualiteModel.fromJson(
-    Map<String, dynamic> json,
-  ) {
-
+  factory ActualiteModel.fromJson(Map<String, dynamic> json) {
     return ActualiteModel(
-
       id: json['id'],
-
-      titre: json['titre'],
-
-      corps: json['corps'],
-
-      createdAt: json['created_at'],
-
-      medias: (json['medias'] as List)
-          .map(
-            (e) => MediaModel.fromJson(e),
-          )
-          .toList(),
+      titre: json['titre'] ?? '',
+      corps: json['corps'] ?? '',
+      createdAt: json['created_at'] ?? '',
+      medias: json['medias'] != null
+          ? (json['medias'] as List)
+              .map((e) => MediaModel.fromJson(e))
+              .toList()
+          : [],
     );
   }
 }
