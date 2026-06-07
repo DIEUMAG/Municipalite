@@ -97300,7 +97300,7 @@ A.zm.prototype={
 Ei(a,b,c,d){return this.azT(a,b,c,d)},
 azT(a,b,c,d){var s=0,r=A.K(t.a),q,p=2,o=[],n,m,l,k,j,i,h,g
 var $async$Ei=A.L(function(e,f){if(e===1){o.push(f)
-s=p}for(;;)switch(s){case 0:h=A.eS("https://dieumags.pythonanywhere.com/api/api/accounts/register/")
+s=p}for(;;)switch(s){case 0:h=A.eS("https://dieumags.pythonanywhere.com/api/accounts/register/")
 p=4
 k=t.N
 j=A.ae(["Content-Type","application/json"],k,k)
@@ -97332,7 +97332,7 @@ return A.J($async$Ei,r)},
 tu(a,b){return this.axG(a,b)},
 axG(a,b){var s=0,r=A.K(t.a),q,p=2,o=[],n,m,l,k,j,i,h,g,f
 var $async$tu=A.L(function(c,d){if(c===1){o.push(d)
-s=p}for(;;)switch(s){case 0:g=A.eS("https://dieumags.pythonanywhere.com/api/api/accounts/login/")
+s=p}for(;;)switch(s){case 0:g=A.eS("https://dieumags.pythonanywhere.com/api/accounts/login/")
 p=4
 j=t.N
 i=A.ae(["Content-Type","application/json"],j,j)
