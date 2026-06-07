@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
 
-      initialRoute: AppRoutes.login,
+      initialRoute: AppRoutes.landing,
 
       routes: AppRoutes.routes,
     );
